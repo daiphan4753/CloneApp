@@ -1,0 +1,14 @@
+<SafeAreaView> fix tai thỏ của ios
+<KeyboardAvoidingView/> bàn phím tự động cuộn lên khi nhập
+<TouchableWithoutFeedback/> nhấn ngoài screen sẽ làm mất bàn phím
+
+export const setStorage = async (name, data) => {
+    try {
+        await AsyncStorage.setItem(name, data);
+        return true;
+    }catch (err){
+        console.log(err);
+        return false;
+    }
+}
+key là name chứa trong data

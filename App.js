@@ -1,10 +1,13 @@
 import React from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+
+import {View, Text} from 'react-native';
+
+import RootRoute from './src/route'
 
 export default App = () => {
   return (
-    <View>
-      <Text>this is App</Text>
+    <View style={{flex: 1}}>
+      <RootRoute />
     </View>
-  )
-}
+  );
+};
