@@ -12,14 +12,13 @@ const SplashScreen = ({navigation}) => {
       if (token === null) {
         navigation.replace('LoginScreen')
       }else {
-        navigation.replace('Home')
+        navigation.replace('Tabs')
       }
     },2000)
 
   }
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/splash.png')} style={styles.img} />
       <Text style={styles.txt}>Wellcome to AppTest</Text>
     </View>
   );
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#2F4F4F',
+    backgroundColor: '#4da6ff',
   },
   img: {
     height: 150,
@@ -39,12 +38,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginVertical: 10,
     fontWeight: 'bold',
-    color: '#8B4513',
+    color: '#ffffff',
     textShadowOffset: {
       height: 1,
       width: 0,
     },
-    textShadowColor: '#Fc0',
+    textShadowColor: '#8f8f8f',
     textShadowRadius: 10,
   },
 });

@@ -2,6 +2,7 @@
 <KeyboardAvoidingView/> bàn phím tự động cuộn lên khi nhập
 <TouchableWithoutFeedback/> nhấn ngoài screen sẽ làm mất bàn phím
 
+
 export const setStorage = async (name, data) => {
     try {
         await AsyncStorage.setItem(name, data);
@@ -12,3 +13,11 @@ export const setStorage = async (name, data) => {
     }
 }
 key là name chứa trong data
+
+
+    lấy kích thước màn hình/ cửa sổ
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
+
+
+ <HeaderCard title={title.length >= 15 ? `${title.substring(0, 15)}...` : title} />

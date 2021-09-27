@@ -1,5 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+// trong data gọi key là name để nhận diện từng bảng data
 export const setStorage = async (name, data) => {
     try {
         await AsyncStorage.setItem(name, data);
@@ -12,7 +13,12 @@ export const setStorage = async (name, data) => {
 
 export const getStorage = async (name) => {
     try{
-        return await AsyncStorage.getItem(name);
+       const value = await AsyncStorage.getItem(name);
+        if(value !== null){
+            return value;
+        }else{
+            console.log('null');
+        }
     }catch (err){
         console.log(err);
     }

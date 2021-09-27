@@ -6,7 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from '../components/SplashScreen';
 import LoginScreen from '../components/LoginScreen';
 import RegisterScreen from '../components/RegisterScreen';
-import Home from '../components/Home';
+import Tabs from '../navigator/Tabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,10 +18,10 @@ export default function RootRoute() {
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{headerShown: true, title: 'Đăng kí'}} />
-
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+        <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
+      
     </NavigationContainer>
   );
 }
